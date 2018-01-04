@@ -1,8 +1,43 @@
+body{
+	max-width: 100%;
+	text-align: center;
+}
+#navbar{
+	background-color: red;
+	
+}
 #img-div{
+  display: block;
+  margin: 0 auto;	
   text-align:center;
+  padding-bottom: 2%;	
 }
 img{
-margin:auto;
+padding-bottom: 1%;	
+margin:0 auto;
 max-width:100%; 
 display: block;  
+}
+
+li{
+	padding:1%;
+	display: inline-block;
+	list-style-type:none;
+}
+
+#footer, h4{
+	color: #fff;
+	background-color: darkcyan;
+	top: 100%;
+	margin: 0 auto;
+	bottom: 0;
+	font-size: 18px;
+}
+@media screen (max-width: 766px){
+	#img-div{
+		max-width: 50%;
+	}
+	li{
+		display:table-column;
+	}
 }
