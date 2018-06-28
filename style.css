@@ -1,43 +1,223 @@
-body{
-	max-width: 100%;
-	text-align: center;
-}
-#navbar{
-	background-color: red;
-	
-}
-#img-div{
-  display: block;
-  margin: 0 auto;	
-  text-align:center;
-  padding-bottom: 2%;	
-}
-img{
-padding-bottom: 1%;	
-margin:0 auto;
-max-width:100%; 
-display: block;  
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    background: #fff;
+    color: #848484;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
 }
 
-li{
-	padding:1%;
-	display: inline-block;
-	list-style-type:none;
+a {
+    text-decoration: none;
 }
 
-#footer, h4{
-	color: #fff;
-	background-color: darkcyan;
-	top: 100%;
-	margin: 0 auto;
-	bottom: 0;
-	font-size: 18px;
+ul {
+    list-style: none;
+    padding: 0 !important;
 }
-@media screen (max-width: 766px){
-	#img-div{
-		max-width: 50%;
-	}
-	li{
-		display:table-column;
-	}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Nav Menu */
+
+@media (max-width: 549px) {
+    body {
+        -webkit-animation: bugfix infinite 1s;
+        /* needed for checkbox hack */
+        background: #fff;
+    }
+    /* needed for checkbox hack */
+    @-webkit-keyframes bugfix {
+        from {
+            padding: 0;
+        }
+        to {
+            padding: 0;
+        }
+    }
+    h1,
+    p {
+        color: #000;
+    }
+    #nav {
+        position: relative;
+    }
+    #nav ul {
+        display: none;
+        width: 100%;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    #nav ul li a {
+        display: block;
+        padding: 1em;
+        background: rgba(69, 69, 182, 0.5);
+        color: white;
+        text-decoration: none;
+        border-right: 1px solid rgba(41, 41, 108, 0.5);
+    }
+    #nav ul li a:hover {
+        background: rgba(55, 55, 145, 0.5);
+    }
+    #nav ul li:last-of-type a {
+        border-right: 0px;
+    }
+    #nav input.trigger {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #nav input.trigger:checked~ul,
+    #nav input.trigger:checked~ul li ul {
+        display: block !important;
+    }
+    #nav label {
+        position: relative;
+        display: block;
+        min-height: 2em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        cursor: pointer;
+        background: rgba(69, 69, 182, 0.5);
+        line-height: 2em;
+        color: #fff;
+    }
+    #nav label:after {
+        position: absolute;
+        right: 1em;
+        top: 0.2em;
+        content: "\2261";
+        font-size: 1.8em;
+        color: white;
+    }
+}
+
+
+/* Media Query to contain the Nav Menu Bar */
+
+b {
+    font-size: 1.5rem;
+}
+
+nav span {
+    color: #000;
+}
+
+.nav-container ul li a:hover {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4CB648;
+}
+
+main {
+    padding: 2vw 5vw;
+    text-align: justify;
+}
+
+
+/* carousel  */
+
+#carousel {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+img {
+    padding-bottom: 1%;
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+}
+
+#video {
+    margin: 0 auto;
+    text-align: center;
+}
+
+iframe {
+    box-shadow: 0 10px 15px 0 #000;
+}
+
+#footer {
+    text-align: center;
+    width: 100%;
+    padding: 2em 0;
+    top: 100%;
+    background-color: rgba(69, 69, 182, 0.5);
+}
+
+#footer h4 {
+    color: #fff;
+    font-size: 18px;
+}
+
+#footer a {
+    color: #ccc;
+}
+
+
+/* media queries */
+
+@media (min-width: 550px) {
+    /* Nav Bar */
+    .nav-ctn {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        background: rgba(69, 69, 182, 0.5);
+    }
+    .trigger {
+        display: none;
+    }
+    b {
+        color: #fff;
+    }
+    .nav-ctn ul li a {
+        padding: 0px 6px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+    }
+    .nav-ctn ul li a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    .nav-ctn ul li {
+        display: inline-block;
+    }
+    .nav-ctn ul {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 800px) {
+    /* Nav Section */
+    .nav-ctn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        flex-direction: row;
+        background: none;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    nav {
+        background: rgba(69, 69, 182, 0.5) !important;
+    }
 }
